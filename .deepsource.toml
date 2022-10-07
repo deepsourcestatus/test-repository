@@ -10,7 +10,7 @@ enabled = false
 
 [[analyzers]]
 name = "csharp"
-enabled = true
+enabled = false
 
 [[analyzers]]
 name = "docker"
