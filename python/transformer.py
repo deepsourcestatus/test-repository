@@ -6,5 +6,3 @@ else:
  world = 'world'
  a = 'hello {}'.format(world)
  f = rf'hello {world}'
-if (this
-and that): y = 'hello ''world'#FIXME: https://github.com/psf/black/issues/26
