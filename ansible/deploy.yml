@@ -22,23 +22,3 @@
         dest: /srv/checkout
         revision: default
 
-    - name: fetch metadata as json
-      shell: cargo metadata | jq
-      ignore_errors: false
-
-    - name: enable redshift service
-      when:
-        - disabled == false
-
-    - name: install ruby 2.3.1
-      command: CONFIGURE_OPTS='--disable-install-doc' rbenv install 2.3.1
-
-    - name: Take out of load balancer pool
-      local_action: ansible.builtin.command /usr/bin/take_out_of_pool {{ inventory_hostname }}
-
-    - name: shell with jinja filter
-      shell: echo {{ "hello"|upper }}
-      changed_when: false
-
-
-
