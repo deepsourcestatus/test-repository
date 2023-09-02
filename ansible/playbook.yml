@@ -16,6 +16,7 @@
         dest: /srv/checkout
         version: latest
   
+  
     - name: clone mercurial repo
       hg:
         repo: 'https://foosball.example.org/path/to/repo.git'
