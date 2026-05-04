@@ -57,3 +57,27 @@ object Main extends App {
   println(lang1.indexOf("a"))
   var sb = new mutable.StringBuilder('a')
 }
+
+object BubbleSort {
+  def bubbleSort(array: Array[Int]): Array[Int] = {
+    breakable {
+      for (_ <- array.indices) {
+        var swap = false
+
+        for (j <- 0 to array.length - 2) {
+          if (array(j) > array(j + 1)) {
+            val temp = array(j)
+            array(j) = array(j + 1)
+            array(j + 1) = temp
+            swap = true
+          }
+        }
+        if (!swap) {
+          break()
+        }
+      }
+    }
+    array
+  }
+
+}
