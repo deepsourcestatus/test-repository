@@ -25,3 +25,5 @@ class Foo
     {
     }
 }
+
+<?php
