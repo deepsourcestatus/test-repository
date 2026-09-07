@@ -2,33 +2,33 @@ version = 1
 
 [[analyzers]]
 name = "test-coverage"
-enabled = true
+enabled = false
 
 [[analyzers]]
 name = "sql"
-enabled = true
+enabled = false
 
 [[analyzers]]
 name = "csharp"
-enabled = true
+enabled = false
 
 [[analyzers]]
 name = "docker"
-enabled = true
+enabled = false
 
   [analyzers.meta]
   dockerfile_paths = ["docker/Dockerfile"]
 
 [[analyzers]]
 name = "rust"
-enabled = true
+enabled = false
 
   [analyzers.meta]
   msrv = "1.30.0"
 
 [[analyzers]]
 name = "php"
-enabled = true
+enabled = false
 
 [[analyzers]]
 name = "java"
@@ -39,11 +39,11 @@ enabled = true
 
 [[analyzers]]
 name = "shell"
-enabled = true
+enabled = false
 
 [[analyzers]]
 name = "terraform"
-enabled = true
+enabled = false
 
 [[analyzers]]
 name = "javascript"
@@ -62,7 +62,7 @@ enabled = true
 
 [[analyzers]]
 name = "ruby"
-enabled = true
+enabled = false
 
 [[analyzers]]
 name = "go"
@@ -84,4 +84,8 @@ enabled = true
 
 [[analyzers]]
 name = "ansible"
+enabled = false
+
+[[transformers]]
+name = "black"
 enabled = true
