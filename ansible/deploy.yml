@@ -1,0 +1,23 @@
+---
+- hosts: localhost
+
+  tasks:
+    - name: change to postgres user
+      ansible.builtin.command: whoami
+      become_user: postgres
+      changed_when: false
+
+    - name: run yum update
+      command: yum update
+
+    - name: clone git repo
+      git:
+        repo: 'https://foosball.example.org/path/to/repo.git'
+        dest: /srv/checkout
+        version: latest
+
+    - name: clone mercurial repo
+      hg:
+        repo: 'https://foosball.example.org/path/to/repo.git'
+        dest: /srv/checkout
+        revision: default
